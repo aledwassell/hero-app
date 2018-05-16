@@ -11,6 +11,7 @@ import { HeroModule } from './hero/hero.module';
 import { HeroesComponent } from './heroes/heroes.component';
 import { UserDetailComponent } from './user-detail/user-detail.component';
 import { MessagesComponent } from './messages/messages.component';
+import { NavbarComponent } from './shared/navbar/navbar.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { MessagesComponent } from './messages/messages.component';
     PageNotFoundComponent,
     HeroesComponent,
     UserDetailComponent,
-    MessagesComponent
+    MessagesComponent,
+    NavbarComponent
   ],
   imports: [
       BrowserModule,
