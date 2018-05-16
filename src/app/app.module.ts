@@ -12,6 +12,9 @@ import { HeroesComponent } from './heroes/heroes.component';
 import { UserDetailComponent } from './user-detail/user-detail.component';
 import { MessagesComponent } from './messages/messages.component';
 import { NavbarComponent } from './shared/navbar/navbar.component';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -29,7 +32,9 @@ import { NavbarComponent } from './shared/navbar/navbar.component';
       FormsModule,
       HeroModule,
       //Important to remeber the order of the AppRoutingModule
-      AppRoutingModule
+      AppRoutingModule,
+      ServiceWorkerModule.register('/ngsw-worker.js', { enabled: environment.production }),
+      BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

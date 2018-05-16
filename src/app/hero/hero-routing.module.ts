@@ -8,7 +8,7 @@ import {PageNotFoundComponent} from '../page-not-found/page-not-found.component'
 const routes: Routes = [
     { path: 'heroes',  component: HeroListComponent },
     { path: 'hero', component: HeroDetailComponent },
-    { path: '', redirectTo: '/heroes', pathMatch: 'full' },
+    { path: '', redirectTo: '/hero', pathMatch: 'full' },
 ];
 
 @NgModule({
