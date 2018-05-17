@@ -1,9 +1,13 @@
 import { Injectable } from '@angular/core';
 import { Observable } from "rxjs/index";
-import { HttpClient } from "@angular/common/http";
+import { HttpClient, HttpHeaders } from "@angular/common/http";
+import { MessageService } from '../message.service';
 
-export interface Cat {
-  name: string;
+export interface Hero {
+    userId: number;
+    id: number;
+    title: string;
+    body: string;
 }
 
 @Injectable({
@@ -11,10 +15,12 @@ export interface Cat {
 })
 export class GetServiceService {
 
-  constructor(private http: HttpClient) {
-    getAllCats(): Observable<Cat[]> {
-        return this.http.get<Cat[]>('https://jsonplaceholder.typicode.com/posts')
-      }
-      //https://malcoded.com/posts/angular-backend-express
+  constructor(
+      private http: HttpClient,
+      private messageService: MessageService
+  ) {
+      getAllHeroes (); Observable<Hero[]> {
+          return: this.http.get<Hero[]>('https://jsonplaceholder.typicode.com/posts')
+      };
   }
 }

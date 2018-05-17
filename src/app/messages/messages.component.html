@@ -3,6 +3,8 @@
   <button class="clear"
     (click)="messageService.clear()"
   >Clear</button>
+  <button (click)="start()">start</button>
+  <h2>{{numberValue}}</h2>
 
   <div *ngFor="let message of messageService.messages">{{message}}</div>
 

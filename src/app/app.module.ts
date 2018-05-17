@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms'; // <-- NgModel lives here
+import { HttpClient } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -27,6 +28,7 @@ import { NavbarComponent } from './shared/navbar/navbar.component';
   imports: [
       BrowserModule,
       FormsModule,
+      HttpClient,
       HeroModule,
       //Important to remeber the order of the AppRoutingModule
       AppRoutingModule
