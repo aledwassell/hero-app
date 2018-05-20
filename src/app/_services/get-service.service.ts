@@ -14,7 +14,7 @@ export interface Hero {
   providedIn: 'root'
 })
 export class GetServiceService {
-
+    Hero = Hero;
   constructor(
       private http: HttpClient,
       private messageService: MessageService
