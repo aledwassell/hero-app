@@ -7,12 +7,16 @@ import { User } from "./user"
   templateUrl: './page.component.html',
   styleUrls: ['./page.component.css']
 })
+
 export class PageComponent implements OnInit {
   constructor(private pageService: PageService) { }
   users: User[];
   ngOnInit() {
+      this.getUsers();
+  }
+  getUsers(): void {
       this.pageService.getData()
-          .subscribe(data => this.users = data);
+          .subscribe(data => console.log(data));
   }
 
 }

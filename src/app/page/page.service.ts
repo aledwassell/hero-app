@@ -7,9 +7,9 @@ import { User } from "./user";
   providedIn: 'root'
 })
 export class PageService {
-    private gitUrl: 'https://jsonplaceholder.typicode.com/posts';
+    private url: 'src/assets/users.json';
     constructor(private http: HttpClient) { }
     getData(): Observable<User[]> {
-      return this.http.get<User[]>(this.gitUrl);
+      return this.http.get<User[]>(this.url);
   }
 }
